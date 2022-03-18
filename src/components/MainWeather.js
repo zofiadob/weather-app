@@ -38,8 +38,16 @@ export default function MainWeather() {
             setWind(currentCon.wind.km);
 
             const nextDays = response.data.next_days;
-            setNextDay1Name(nextDays.day);
-            setNextDay1Comment(nextDays.comment);
+            setNextDay1Name(nextDays[1].day);
+            setNextDay1Comment(nextDays[1].comment);
+            setNextDay2Name(nextDays[2].day);
+            setNextDay2Comment(nextDays[2].comment);
+            setNextDay3Name(nextDays[3].day);
+            setNextDay3Comment(nextDays[3].comment);
+            setNextDay4Name(nextDays[4].day);
+            setNextDay4Comment(nextDays[4].comment);
+            setNextDay5Name(nextDays[5].day);
+            setNextDay5Comment(nextDays[5].comment);
         })
     }, [baseUrl])
 
@@ -51,7 +59,16 @@ export default function MainWeather() {
     {humidity} <br/>
     {wind} <br/><br/><br/>
 
-
+    {nextDay1Name}<br />
+    {nextDay1Comment}<br />
+    {nextDay2Name}<br />
+    {nextDay2Comment}<br />
+    {nextDay3Name}<br />
+    {nextDay3Comment}<br />
+    {nextDay4Name}<br />
+    {nextDay4Comment}<br />
+    {nextDay5Name}<br />
+    {nextDay5Comment}<br />
     
     
     </div>

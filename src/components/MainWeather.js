@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Current from './Current';
 
 export default function MainWeather() {
     let baseUrl = 'https://weatherdbi.herokuapp.com/data/weather/poznan'
@@ -9,6 +10,7 @@ export default function MainWeather() {
     const [precip, setPrecip] = useState();
     const [humidity, setHumidity] = useState();
     const [wind, setWind] = useState();
+    const [comment, setComment] = useState();
 
     const [nextDay1Name, setNextDay1Name] = useState();
     const [nextDay1Comment, setNextDay1Comment] = useState();
@@ -36,6 +38,7 @@ export default function MainWeather() {
             setPrecip(currentCon.precip);
             setHumidity(currentCon.humidity);
             setWind(currentCon.wind.km);
+            setComment(currentCon.comment);
 
             const nextDays = response.data.next_days;
             setNextDay1Name(nextDays[1].day);
@@ -51,26 +54,23 @@ export default function MainWeather() {
         })
     }, [baseUrl])
 
-  return (
-    <div>{placeName} <br/>
-    {dayHour} <br/>
-    {temperature} <br/>
-    {precip} <br/>
-    {humidity} <br/>
-    {wind} <br/><br/><br/>
+    const nextDaysList = [[nextDay1Name,nextDay1Comment],
+                          [nextDay2Name,nextDay2Comment],
+                          [nextDay3Name,nextDay3Comment],
+                          [nextDay4Name,nextDay4Comment],
+                          [nextDay5Name,nextDay5Comment]]
 
-    {nextDay1Name}<br />
-    {nextDay1Comment}<br />
-    {nextDay2Name}<br />
-    {nextDay2Comment}<br />
-    {nextDay3Name}<br />
-    {nextDay3Comment}<br />
-    {nextDay4Name}<br />
-    {nextDay4Comment}<br />
-    {nextDay5Name}<br />
-    {nextDay5Comment}<br />
-    
-    
-    </div>
+  return (
+    <main>
+    <h1>Weather-app</h1>
+    <Current 
+        placeName={placeName}
+        dayHour={dayHour}
+        temperature={temperature}
+        precip={precip}
+        humidity={humidity}
+        wind={wind}
+        comment={comment}/>
+        </main>
   )
 }

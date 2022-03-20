@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Current from './Current';
 import NextDays from './NextDays';
+import Cities from './Cities';
+import { citiesInfo } from './citiesInfo';
 
 export default function MainWeather() {
-    let baseUrl = 'https://weatherdbi.herokuapp.com/data/weather/poznan'
+    
+    const baseUrl = 'https://weatherdbi.herokuapp.com/data/weather/poznan';
+    
     const [placeName, setPlaceName] = useState();
     const [dayHour, setDayHour] = useState();
     const [temperature, setTemperature] = useState();
@@ -61,9 +65,11 @@ export default function MainWeather() {
                           [nextDay4Name,nextDay4img],
                           [nextDay5Name,nextDay5img]]
 
+
   return (
     <main>
     <h1>Weather-app</h1>
+    <Cities citiesInfo={citiesInfo}/>
     <Current 
         placeName={placeName}
         dayHour={dayHour}

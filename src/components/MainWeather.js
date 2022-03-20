@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Current from './Current';
 import NextDays from './NextDays';
-import Cities from './Cities';
 import { citiesInfo } from './citiesInfo';
 
 export default function MainWeather() {
     
-    const baseUrl = 'https://weatherdbi.herokuapp.com/data/weather/poznan';
-    
+    const [url, setUrl] = useState('https://weatherdbi.herokuapp.com/data/weather/poznan');
     const [placeName, setPlaceName] = useState();
     const [dayHour, setDayHour] = useState();
     const [temperature, setTemperature] = useState();
@@ -34,7 +32,7 @@ export default function MainWeather() {
 
 
     useEffect(() =>{
-        axios.get(baseUrl)
+        axios.get(url)
         .then(response => {
             const currentCon = response.data.currentConditions;
             setPlaceName(response.data.region);
@@ -49,15 +47,15 @@ export default function MainWeather() {
             setNextDay1Name(nextDays[1].day);
             setNextDay1img(nextDays[1].iconURL);
             setNextDay2Name(nextDays[2].day);
-            setNextDay2img(nextDays[2].comment);
+            setNextDay2img(nextDays[2].iconURL);
             setNextDay3Name(nextDays[3].day);
-            setNextDay3img(nextDays[3].comment);
+            setNextDay3img(nextDays[3].iconURL);
             setNextDay4Name(nextDays[4].day);
-            setNextDay4img(nextDays[4].comment);
+            setNextDay4img(nextDays[4].iconURL);
             setNextDay5Name(nextDays[5].day);
-            setNextDay5img(nextDays[5].comment);
+            setNextDay5img(nextDays[5].iconURL);
         })
-    }, [baseUrl])
+    }, [url])
 
     const nextDaysList = [[nextDay1Name,nextDay1img],
                           [nextDay2Name,nextDay2img],
@@ -65,11 +63,17 @@ export default function MainWeather() {
                           [nextDay4Name,nextDay4img],
                           [nextDay5Name,nextDay5img]]
 
-
+                          
   return (
     <main>
     <h1>Weather-app</h1>
-    <Cities citiesInfo={citiesInfo}/>
+    <div className='cities-box'>
+          {citiesInfo.map( city => {
+              return(
+                  <button className='city' onClick={() => setUrl(city[1])}>{city[0]}</button>
+              )
+          })}
+          </div>
     <Current 
         placeName={placeName}
         dayHour={dayHour}

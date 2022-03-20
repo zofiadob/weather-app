@@ -1,0 +1,18 @@
+@use './variables' as vars;
+@use './app' as app;
+
+html{
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+body{
+    
+    margin: 0;
+    background: vars.$dark-violet;
+    color: vars.$text-white;
+    font-family: vars.$font;
+    font-size: 16px;
+}
+
+@include app.app();

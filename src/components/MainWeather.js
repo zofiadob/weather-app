@@ -65,6 +65,10 @@ export default function MainWeather() {
 
                           
   return (
+      <>
+    <nav>
+    <img className='mobile-icon' alt='mobileIcon'></img>
+    </nav>
     <main>
     <h1>Weather-app</h1>
     <div className='cities-box'>
@@ -84,5 +88,6 @@ export default function MainWeather() {
         comment={comment}/>
         <NextDays nextDaysList={nextDaysList}/>
         </main>
+        </>
   )
 }

@@ -1,0 +1,35 @@
+@use './variables' as vars;
+
+@mixin app() {
+
+    main{
+        margin: 0 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    nav{
+        background: vars.$light-violet;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .cities-box{
+        position: absolute;
+        display: block;
+        top: 10%;
+
+        .city{
+            width: 100%;
+            color: vars.$text-white;
+            font-family: vars.$font;
+            font-size: 16px;
+            background: vars.$light-violet-full;
+            border: none;
+            padding: .7rem 0;
+            font-size: 1.4rem;
+        }
+    }
+}

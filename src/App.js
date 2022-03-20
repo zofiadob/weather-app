@@ -1,4 +1,3 @@
-import './App.css';
 import MainWeather from './components/MainWeather';
 
 function App() {

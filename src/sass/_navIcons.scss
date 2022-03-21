@@ -1,0 +1,89 @@
+@mixin iconAnimation {
+  
+    ///////ham icon
+    @keyframes openAnimation {
+        0% { 
+            transform: translate(0, 5px);
+         }
+
+        96% { 
+            transform: translate(0, 20px);
+        }
+        100% { 
+            opacity: 0;
+            display: none;
+        }
+      } 
+
+      @keyframes closeAnimation {
+        0% { 
+            display: inline;
+            transform: translate(0, 20px);
+         }
+
+        50% { 
+            transform: translate(0, 5px);
+        }
+        
+        100% { 
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+      } 
+      
+
+    .ani-active-open{
+        animation: openAnimation .3s ease-in;
+    }
+
+    .ani-active-close{
+        animation: closeAnimation .4s ease-in;
+    }
+
+    .ani-icon-close{
+        transform: translate(40px, 0);
+    }
+
+    .invisible{
+        display: none;
+    }
+    
+    .visible{
+        display: inline;
+    }
+
+
+    ///////close icon
+
+    @keyframes openAnimationForClose {
+        0% { 
+            display: inline;
+        }
+
+        100% { 
+            transform: translate(-20px, 0);
+        }
+      } 
+
+      @keyframes closeAnimationForClose {
+        0% { 
+            transform: translate(0, 0);
+         }
+
+        96% { 
+            transform: translate(20px, 0);
+        }
+        100% { 
+            opacity: 0;
+            display: none;
+        }
+      } 
+
+      .ani-icon-close-open{
+          animation: openAnimationForClose .4s ease;
+      }
+
+      .ani-icon-close-close{
+        animation: closeAnimationForClose .3s ease;
+    }
+}

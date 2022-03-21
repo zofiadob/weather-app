@@ -1,0 +1,32 @@
+@use './variables' as vars;
+
+@mixin nextDays() {
+    
+    .next-days-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .small-box{
+        background: vars.$light-violet;
+        border-radius: 20px;
+        width: 47%;
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        
+        &:nth-of-type(2n){
+            margin-left: .4rem;
+        }
+
+        div{
+            margin-bottom: .5rem;
+        }
+
+        img{
+            width: 40%;
+        }
+    }
+}

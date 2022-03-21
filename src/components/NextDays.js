@@ -10,7 +10,7 @@ export default function NextDays(props) {
         {nextDaysList.map(day => {
             return(
                 <div className='small-box'>
-                    <div className='day-name'>{day[0]}</div>
+                    <div>{day[0]}</div>
                     <img src={day[1]} alt='icon' />
                 </div>
             );

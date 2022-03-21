@@ -1,4 +1,5 @@
 @use './variables' as vars;
+@use './navIcons' as navIcons;
 
 @mixin app() {
 
@@ -12,6 +13,7 @@
         background: vars.$light-violet;
         text-align: right;
         padding: 1rem;
+        min-height: 24px;
     }
 
     h1{
@@ -52,4 +54,6 @@
 
         
     }
+
+    @include navIcons.iconAnimation();
 }

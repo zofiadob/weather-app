@@ -1,6 +1,7 @@
 @use './variables' as vars;
 @use './app' as app;
 @use './current' as current;
+@use './nextDays' as next;
 
 html{
     box-sizing: border-box;
@@ -18,3 +19,4 @@ body{
 
 @include app.app();
 @include current.current();
+@include next.nextDays();

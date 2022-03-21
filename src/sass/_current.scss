@@ -5,5 +5,49 @@
         text-align: left;
         background: vars.$light-violet;
         border-radius: 20px;
+        padding: 2rem;
+    }
+
+    .big-box{
+        display: flex;
+        flex-direction: row-reverse;
+
+        .big-icon{
+            margin: auto;
+            background: vars.$dark-violet;
+            padding: .7rem;
+            border-radius: 20px;
+        }
+
+        .big-text{
+            p{
+                margin: 0;
+            }
+
+            p:nth-of-type(2){
+                font-weight: 500;
+            }
+
+            h2{
+                margin: .3rem 0;
+            }
+        }
+    }
+
+    .info-box{
+        display: flex;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+
+        .four-icon-box{
+            width: 50%;
+            margin: .7rem 0;
+            font-size: 1.4rem;
+            font-weight: 200;
+        }
+
+        svg{
+            margin-right: 1rem;
+        }
     }
 }

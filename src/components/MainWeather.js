@@ -15,6 +15,7 @@ export default function MainWeather() {
     const [humidity, setHumidity] = useState();
     const [wind, setWind] = useState();
     const [comment, setComment] = useState();
+    const [img, setImg] = useState();
 
     const [nextDay1Name, setNextDay1Name] = useState();
     const [nextDay1img, setNextDay1img] = useState();
@@ -43,6 +44,8 @@ export default function MainWeather() {
             setHumidity(currentCon.humidity);
             setWind(currentCon.wind.km);
             setComment(currentCon.comment);
+            setImg(currentCon.iconURL);
+
 
             const nextDays = response.data.next_days;
             setNextDay1Name(nextDays[1].day);
@@ -86,7 +89,8 @@ export default function MainWeather() {
         precip={precip}
         humidity={humidity}
         wind={wind}
-        comment={comment}/>
+        comment={comment}
+        img={img} />
         <NextDays nextDaysList={nextDaysList}/>
         </main>
         </>

@@ -18,6 +18,8 @@ export default function HamCloseIcon() {
           .querySelector(".ani-icon-ham")
           .setAttribute("class", "ani-icon-ham ani-active-open invisible");
       }, 300);
+      document.querySelector('.cities-box').setAttribute('style', 'display:block;');
+      document.querySelector('.mobile-back').setAttribute('style', 'display:block;');
 
       setTimeout(() => {
         document
@@ -33,8 +35,10 @@ export default function HamCloseIcon() {
       .querySelector(".ani-icon-close")
       .setAttribute("class", "ani-icon-close ani-icon-close-close");
       setTimeout(() => {
-        document.querySelector(".ani-icon-close").setAttribute("style", "transform: translate(40px, 0);");
+        document.querySelector(".ani-icon-close").setAttribute("style", "transform: translate(40px, 0);display:none;");
       }, 290);
+      document.querySelector('.cities-box').setAttribute('style', 'display:none;')
+      document.querySelector('.mobile-back').setAttribute('style', 'display:none;')
       setTimeout(() => {
         document
           .querySelector(".ani-icon-ham")

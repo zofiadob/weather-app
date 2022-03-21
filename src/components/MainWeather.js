@@ -73,6 +73,7 @@ export default function MainWeather() {
     <nav>
         <HamCloseIcon />
     </nav>
+    <div className='mobile-back'></div>
     <main>
     <h1>Weather-app</h1>
     <div className='cities-box'>

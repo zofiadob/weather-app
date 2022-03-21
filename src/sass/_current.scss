@@ -1,0 +1,9 @@
+@use './variables' as vars;
+
+@mixin current {
+    .current-box{
+        text-align: left;
+        background: vars.$light-violet;
+        border-radius: 20px;
+    }
+}

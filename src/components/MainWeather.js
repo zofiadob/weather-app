@@ -3,6 +3,7 @@ import axios from 'axios'
 import Current from './Current';
 import NextDays from './NextDays';
 import { citiesInfo } from './citiesInfo';
+import HamCloseIcon from './HamCloseIcon';
 
 export default function MainWeather() {
     
@@ -67,7 +68,7 @@ export default function MainWeather() {
   return (
       <>
     <nav>
-    <img className='mobile-icon' alt='mobileIcon'></img>
+        <HamCloseIcon />
     </nav>
     <main>
     <h1>Weather-app</h1>

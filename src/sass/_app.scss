@@ -10,6 +10,8 @@
 
     nav{
         background: vars.$light-violet;
+        text-align: right;
+        padding: 1rem;
     }
 
     h1{
@@ -18,8 +20,11 @@
 
     .cities-box{
         position: absolute;
-        display: block;
-        top: 10%;
+        display: none;
+        top: 0%;
+        left: 5%;
+        right: 5%;
+
 
         .city{
             width: 100%;
@@ -30,6 +35,21 @@
             border: none;
             padding: .7rem 0;
             font-size: 1.4rem;
+            transition: background 0.2s ease;
+
+            &:nth-of-type(1){
+                border-radius: 20px 20px 0 0;
+            }
+
+            &:nth-last-of-type(1){
+                border-radius: 0 0 20px 20px;
+            }
+
+            &:active{
+                box-shadow: inset 1px 1px 1px 1px rgba(35, 22, 81, 0.75);
+            }
         }
+
+        
     }
 }

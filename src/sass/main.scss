@@ -1,5 +1,6 @@
 @use './variables' as vars;
 @use './app' as app;
+@use './current' as current;
 
 html{
     box-sizing: border-box;
@@ -16,3 +17,4 @@ body{
 }
 
 @include app.app();
+@include current.current();

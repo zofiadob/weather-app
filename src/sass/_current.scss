@@ -11,9 +11,10 @@
     .big-box{
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between;
 
         .big-icon{
-            margin: auto;
+            margin: auto 0 auto 1rem;
             background: vars.$dark-violet;
             padding: .7rem;
             border-radius: 20px;
@@ -22,6 +23,7 @@
         .big-text{
             p{
                 margin: 0;
+                font-size: clamp(.9rem, 1.5vw, 3rem);
             }
 
             p:nth-of-type(2){
@@ -30,6 +32,7 @@
 
             h2{
                 margin: .3rem 0;
+                font-size: clamp(2rem, 3.5vw, 6rem);
             }
         }
     }
@@ -42,7 +45,7 @@
         .four-icon-box{
             width: 50%;
             margin: .7rem 0;
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 2.5vw, 5rem);
             font-weight: 200;
         }
 
@@ -50,5 +53,9 @@
             margin-right: 1rem;
             color: vars.$dark-violet;
         }
+    }
+
+    .desktop{
+        display: none;
     }
 }

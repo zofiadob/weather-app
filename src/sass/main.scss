@@ -2,10 +2,12 @@
 @use './app' as app;
 @use './current' as current;
 @use './nextDays' as next;
+@use './responsive' as resp;
 
 html{
     box-sizing: border-box;
     height: 100vh;
+    font-size: 16px;
 }
 
 body{
@@ -14,9 +16,10 @@ body{
     background: vars.$dark-violet;
     color: vars.$text-white;
     font-family: vars.$font;
-    font-size: 16px;
 }
+
 
 @include app.app();
 @include current.current();
 @include next.nextDays();
+@include resp.responsive();

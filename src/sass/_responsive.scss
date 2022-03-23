@@ -1,0 +1,64 @@
+@use './variables' as vars;
+
+@mixin responsive {
+    
+    @media screen and (min-width: 600px) {
+
+        h1{
+            text-align: left;
+        }
+        
+        .big-box{
+            flex-direction: row;
+            justify-content: left;
+            width: 75%;
+
+            .big-text{
+                margin: auto 0 auto 2rem;
+                width: 100%;
+            }
+        }
+
+        .info-box{
+            margin-top: .8rem;
+            flex-wrap: nowrap;
+            
+            .four-icon-box{
+                width: 100%;
+            }
+        }
+
+        .mobile{
+            display: none;
+        }
+        
+        .desktop{
+            display: flex;
+        }
+
+        .desk-style{
+            flex-wrap: wrap;
+            width: 20%;
+            min-height: 100%;
+            margin: 0;
+            background: vars.$dark-violet;
+            padding: .7rem;
+            border-radius: 20px;
+
+             img{
+                 margin: auto;
+                 width: 80%;
+             }
+        }
+
+        .current-box{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+
+        .small-box{
+            width: 18%;
+        }
+    }
+}

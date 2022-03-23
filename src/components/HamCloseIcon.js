@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function HamCloseIcon() {
-  function onClickHandleHam() {
+  function onClickHandle() {
     const hamIcon = document.querySelector(".ani-icon-ham");
     const closeIcon = document.querySelector(".ani-icon-ham");
     if (
@@ -56,7 +56,7 @@ export default function HamCloseIcon() {
         viewBox="0 0 30 19"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        onClick={onClickHandleHam}
+        onClick={onClickHandle}
       >
         <rect
           className="rect-1"
@@ -89,7 +89,7 @@ export default function HamCloseIcon() {
         viewBox="0 0 21 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        onClick={onClickHandleHam}
+        onClick={onClickHandle}
       >
         <rect
           y="18.0876"

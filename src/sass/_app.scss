@@ -30,7 +30,7 @@
     }
 
     h1{
-        font-size: 3rem;
+        font-size: clamp(3rem, 4vw, 4rem);
     }
 
     .cities-box{
@@ -46,7 +46,6 @@
             width: 100%;
             color: vars.$text-white;
             font-family: vars.$font;
-            font-size: 16px;
             background: vars.$light-violet-full;
             border: none;
             padding: .7rem 0;

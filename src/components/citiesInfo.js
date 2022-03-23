@@ -1,7 +1,7 @@
 export const citiesInfo = [
   ["Poznań", "https://weatherdbi.herokuapp.com/data/weather/poznan"],
 
-  ["Warsaw", "https://weatherdbi.herokuapp.com/data/weather/warsaw"],
+  ["Szczecin", "https://weatherdbi.herokuapp.com/data/weather/szczecin"],
 
   ["Gdańsk", "https://weatherdbi.herokuapp.com/data/weather/gdansk"],
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function NextDays(props) {
     const {
@@ -11,7 +12,7 @@ export default function NextDays(props) {
             return(
                 <div className='small-box'>
                     <div>{day[0]}</div>
-                    <img src={day[1]} alt='icon' />
+                    <FontAwesomeIcon className='wea-pic-next' icon={day[1]} />
                 </div>
             );
         })}

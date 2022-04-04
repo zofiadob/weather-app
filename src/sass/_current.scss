@@ -1,79 +1,79 @@
-@use './variables' as vars;
+@use "./variables" as vars;
 
 @mixin current {
-    .current-box{
-        text-align: left;
-        background: vars.$light-violet;
-        border-radius: 20px;
-        padding: 2rem;
+  .current-box {
+    text-align: left;
+    background: vars.$light-violet;
+    border-radius: 20px;
+    padding: 2rem;
+  }
+
+  .big-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .big-icon {
+      margin: auto 0 auto 1rem;
+      background: vars.$dark-violet;
+      padding: 0.7rem;
+      border-radius: 20px;
     }
 
-    .big-box{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+    .big-text {
+      p {
+        margin: 0;
+        font-size: clamp(0.9rem, 1.5vw, 3rem);
+      }
 
-        .big-icon{
-            margin: auto 0 auto 1rem;
-            background: vars.$dark-violet;
-            padding: .7rem;
-            border-radius: 20px;
-        }
+      p:nth-of-type(2) {
+        font-weight: 500;
+      }
 
-        .big-text{
-            p{
-                margin: 0;
-                font-size: clamp(.9rem, 1.5vw, 3rem);
-            }
-
-            p:nth-of-type(2){
-                font-weight: 500;
-            }
-
-            h2{
-                margin: .3rem 0;
-                font-size: clamp(2rem, 3.5vw, 6rem);
-            }
-        }
+      h2 {
+        margin: 0.3rem 0;
+        font-size: clamp(2rem, 3.5vw, 6rem);
+      }
     }
-    
-    .wea-pic{
-        margin: auto;
-        font-size: 550%;
-    }
+  }
 
-    .wea-pic-next{
-        font-size: 250%;
-    }
+  .wea-pic {
+    margin: auto;
+    font-size: 550%;
+  }
 
-    .mobi-icon{
-        font-size: 300%;
-    }
+  .wea-pic-next {
+    font-size: 250%;
+  }
 
-    a{
-        color: white;
-        margin-top: 1rem;
-    }
+  .mobi-icon {
+    font-size: 300%;
+  }
 
-    .info-box{
-        display: flex;
-        margin-top: 2rem;
-        flex-wrap: wrap;
+  a {
+    color: white;
+    margin-top: 1rem;
+  }
 
-        .four-icon-box{
-            width: 50%;
-            margin: .7rem 0;
-            font-size: clamp(1rem, 2.5vw, 5rem);
-            font-weight: 200;
-        }
+  .info-box {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 
-        svg{
-            margin-right: 1rem;
-            color: vars.$dark-violet;
-        }
+    .four-icon-box {
+      width: 50%;
+      margin: 0.7rem 0;
+      font-size: clamp(1rem, 2.5vw, 5rem);
+      font-weight: 200;
     }
 
-    .desktop{
-        display: none;
+    svg {
+      margin-right: 1rem;
+      color: vars.$dark-violet;
     }
+  }
+
+  .desktop {
+    display: none;
+  }
 }

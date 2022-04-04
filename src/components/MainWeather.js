@@ -51,15 +51,15 @@ export default function MainWeather() {
       setImg(weatherCodes[response.data.current_weather.weathercode].pic);
 
       const nextDays = response.data.daily;
-      setNextDay1Name(nextDays.time[1]);
+      setNextDay1Name(currentTime.getDay() + 1);
       setNextDay1img(weatherCodes[nextDays.weathercode[1]].pic);
-      setNextDay2Name(nextDays.time[2]);
+      setNextDay2Name(currentTime.getDay() + 2);
       setNextDay2img(weatherCodes[nextDays.weathercode[2]].pic);
-      setNextDay3Name(nextDays.time[3]);
+      setNextDay3Name(currentTime.getDay() + 3);
       setNextDay3img(weatherCodes[nextDays.weathercode[3]].pic);
-      setNextDay4Name(nextDays.time[4]);
+      setNextDay4Name(currentTime.getDay() + 4);
       setNextDay4img(weatherCodes[nextDays.weathercode[4]].pic);
-      setNextDay5Name(nextDays.time[5]);
+      setNextDay5Name(currentTime.getDay() + 5);
       setNextDay5img(weatherCodes[nextDays.weathercode[5]].pic);
     });
   }, [url]);

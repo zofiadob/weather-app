@@ -22,12 +22,12 @@ export default function Current(props) {
 
   return (
     <div className="current-box">
-          <div className="big-icon desktop desk-style">
-          <FontAwesomeIcon className="wea-pic" icon={img} />
-        </div>
+      <div className="big-icon desktop desk-style">
+        <FontAwesomeIcon className="wea-pic" icon={img} />
+      </div>
       <div className="big-box">
         <div className="big-icon mobile">
-        <FontAwesomeIcon className="wea-pic mobi-icon" icon={img} />
+          <FontAwesomeIcon className="wea-pic mobi-icon" icon={img} />
         </div>
         <div className="big-text">
           <p>{dayHour}</p>
@@ -35,20 +35,20 @@ export default function Current(props) {
           <p>{comment}</p>
 
           <div className="info-box desk-style-info desktop">
-        {fourInfos.map((info) => {
-          return (
-            <div className="four-icon-box">
-              <div className="icon-text">
-                <FontAwesomeIcon icon={info[2]} />
-                <span>
-                  {info[0]}
-                  {info[1]}
-                </span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+            {fourInfos.map((info) => {
+              return (
+                <div className="four-icon-box">
+                  <div className="icon-text">
+                    <FontAwesomeIcon icon={info[2]} />
+                    <span>
+                      {info[0]}
+                      {info[1]}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
       <div className="info-box mobile">

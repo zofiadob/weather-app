@@ -15,8 +15,8 @@ export default function Current(props) {
 
   const fourInfos = [
     [temperature, " °C", "fa-solid fa-temperature-high"],
-    [precip, "", "fa-solid fa-cloud-showers-heavy"],
-    [humidity, "", "fa-solid fa-droplet"],
+    [precip, " mm", "fa-solid fa-cloud-showers-heavy"],
+    [humidity, " %", "fa-solid fa-droplet"],
     [wind, " km/h", "fa-solid fa-wind"],
   ];
 

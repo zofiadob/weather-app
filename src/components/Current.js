@@ -23,11 +23,11 @@ export default function Current(props) {
   return (
     <div className="current-box">
           <div className="big-icon desktop desk-style">
-          <img src={img} alt="currentImgIcon" />
+          <FontAwesomeIcon className="wea-pic" icon={img} />
         </div>
       <div className="big-box">
         <div className="big-icon mobile">
-          <img src={img} alt="currentImgIcon" />
+        <FontAwesomeIcon className="wea-pic mobi-icon" icon={img} />
         </div>
         <div className="big-text">
           <p>{dayHour}</p>

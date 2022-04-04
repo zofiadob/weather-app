@@ -11,6 +11,7 @@ function App() {
       <header className="App-header">
         <MainWeather />
       </header>
+      <a className='ref' href="https://open-meteo.com/">Weather data by Open-Meteo.com</a>
     </div>
   );
 }

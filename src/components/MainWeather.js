@@ -3,6 +3,7 @@ import axios from 'axios'
 import Current from './Current';
 import NextDays from './NextDays';
 import { citiesInfo } from './citiesInfo';
+import { weatherCodes } from './weather-code';
 import HamCloseIcon from './HamCloseIcon';
 
 export default function MainWeather() {
@@ -40,7 +41,7 @@ export default function MainWeather() {
     useEffect(() =>{
         axios.get(url)
         .then(response => {
-            console.log(response.data.hourly);
+            console.log(response.data);
             const currentCon = response.data.hourly;
             setPlaceName('Poznań');
             setDayHour(currentCon.time[hour].substring(0,10)+ ' - ' + currentCon.time[hour].substring(11,16));
@@ -48,8 +49,8 @@ export default function MainWeather() {
             setPrecip(currentCon.precipitation[hour]);
             setHumidity(currentCon.relativehumidity_2m[hour]);
             setWind(currentCon.windspeed_80m[hour]);
-            setComment(currentCon.comment);
-            setImg(currentCon.iconURL);
+            setComment(weatherCodes[response.data.current_weather.weathercode].desc);
+            setImg(weatherCodes[response.data.current_weather.weathercode].pic);
 
 
             // const nextDays = response.data.next_days;
